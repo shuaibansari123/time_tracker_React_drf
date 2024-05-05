@@ -1,0 +1,51 @@
+# Use a lightweight version of Python with Alpine Linux
+FROM python:3.11-alpine3.18
+
+# Environment variables to prevent Python from writing pyc files to disc (equivalent to python -B option)
+# and to prevent Python from buffering stdout and stderr (equivalent to python -u option)
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PATH="/scripts:/venv/bin:$PATH"
+
+# Set the working directory in the container
+WORKDIR /backend
+
+# Expose port 8000 for the application
+EXPOSE 8000
+
+# Copy requirements files to a temporary directory to optimize build cache utilization
+COPY ./requirements.txt /tmp/requirements.txt
+COPY ./requirements.dev.txt /tmp/requirements.dev.txt
+
+# Copy application code and scripts to their respective directories in the container
+COPY ./scripts /scripts
+COPY ./backend /backend
+
+# Install system dependencies and Python dependencies
+# Add temporary build dependencies for the installation of requirements
+ARG DEV=false
+RUN python -m venv /venv && \
+    /venv/bin/pip install --upgrade pip && \
+    apk add --no-cache postgresql-client jpeg-dev && \
+    apk add --no-cache --virtual .tmp-build-deps \
+        build-base postgresql-dev musl-dev zlib-dev libffi-dev linux-headers && \
+    /venv/bin/pip install -r /tmp/requirements.txt && \
+    if [ $DEV = "true" ]; then \
+        /venv/bin/pip install -r /tmp/requirements.dev.txt; \
+    fi && \
+    apk del .tmp-build-deps
+
+# Cleanup temporary files
+RUN rm -rf /tmp
+
+# Setup dedicated user for running the application
+RUN adduser --disabled-password --no-create-home django-user && \
+    mkdir -p /vol/web/media /vol/web/static && \
+    chown -R django-user:django-user /vol && \
+    chmod -R 755 /vol && \
+    chmod -R +x /scripts
+
+# Switch to the non-root user for added security
+USER django-user
+
+CMD ["run.sh"]

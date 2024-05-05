@@ -1,0 +1,13 @@
+.dashboard {
+    width: 100%;
+    background-image: url('../img/dashboard-bg.png');
+    background-size: 150%;
+    background-color: rgba(193, 219, 251, 0.37);
+    overflow: hidden;
+}
+
+.dashboard-container-block {
+
+    height: 45rem;
+    margin-top: 4rem;
+}

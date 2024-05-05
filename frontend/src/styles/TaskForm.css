@@ -1,0 +1,65 @@
+
+.taskForm {
+    max-height: 200rem ; 
+    min-height: 34rem ;
+    margin-top: 4rem ;
+    margin-bottom: 3rem  ;
+    padding-top: 0.3rem;
+    background-image: url('../img/metalBg.png');
+    /* padding: 1.5rem; */
+    box-shadow: 0.2rem 0.5rem 0.3rem rgba(0, 0, 0, 0.2);
+
+}
+.taskForm-row {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0.4rem;
+    /* padding-top: 0.5rem; */
+}
+.taskForm-row.btn-row {
+    margin-top: 1rem;
+
+}
+.taskForm-row.submit-btn-row {
+    margin-top: 1rem;
+    margin-left: 17.5rem;
+}
+
+
+.form-control {
+    font-size: 0.9rem ;
+    width: 6rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem; 
+    /* margin-bottom: 0.5rem ; */
+    /* background-color: #eff0fe; */
+}
+.form-control.date-input {
+    font-size: 0.9rem ;
+    width: 8rem;
+    /* background-color: #eff0fe; */
+}
+.form-control.task-input {
+    width: 10.4rem;
+    /* background-color: #eff0fe; */
+}
+.form-control.notes-input {
+    width: 22.5rem;
+}
+
+
+
+.form-label {
+    font-family: 'Arial', sans-serif; 
+    font-size: 0.9rem;
+    color: rgb(11, 12, 12);
+    width: 100px; 
+    height: 25px; 
+    text-align: center; 
+    /* margin-top: ; */
+    margin-bottom: 0.5rem ;
+    /* background-color: #eff0fe; */
+}
+

@@ -1,0 +1,53 @@
+.signup-main {
+    width: 100%;
+    background-image: url('../img/signup-bg.png');
+    background-position: 0%;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.login-main {
+    width: 100%;
+    background-image: url('../img/login-bg.png');
+    background-position: 200%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.signup-container {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    margin-right: 16rem;
+    padding: 4rem;
+}
+.login-container {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    margin-left: 7rem;
+    padding: 4rem;
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .signup-container,
+    .login-container {
+        margin-left: 0rem;
+        padding: 0rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-container,
+    .login-container {
+        margin-left: 0rem;
+        padding: 0.5rem;
+    }
+    .signup-main,
+    .login-main {
+        padding: 0.5rem;
+        
+    }
+}

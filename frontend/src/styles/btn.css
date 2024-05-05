@@ -1,0 +1,93 @@
+
+
+
+.primary-btn {
+    padding: 12px 40px !important;
+    border-radius: 30px !important;
+    font-size: 18px !important; 
+    font-style: normal !important;
+    font-weight: bold  !important;
+    line-height: 1.5rem   !important;
+    color: #fff !important;
+    width: fit-content !important;
+    text-align: center !important;
+    border: none !important;
+    background-color: #457ae4   !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2) ;
+}
+.secondary-btn {
+    padding: 12px 40px !important; 
+    border: 1px solid #457ae4 !important;
+    border-radius: 30px !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    line-height: 1rem !important;
+    color: #457ae4 !important;
+    text-align: center !important;
+    width: fit-content !important;
+    background-color: #fff !important;
+}
+.taskform-btn{
+    border: 0.1rem solid #007bff;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    font-family: 'Digital', 'Arial', sans-serif;
+    color: #007bff;
+    width: 4rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    margin-left: 0.3rem;
+    margin-top: 0.5rem;
+    /* margin-bottom: 0.7rem; */
+    /* box-shadow:  0 0 0.3rem #007bff; */
+}
+.taskform-btn.copy-btn{
+    margin-left: -0.8rem;
+}
+
+.small-btn {
+    padding: 0.2rem 1.2rem ;
+    border-radius: 0.4rem ;
+    height: fit-content;
+    width: fit-content ;
+    color: #fff ;
+    border: none   ;
+    background-color: #3d95e7 ;
+    /* box-shadow: 0.1rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2); */
+}
+.small-btn.deleteBtn {
+    padding: 0.3rem 1rem ;
+    width: 5rem;
+    margin-left:0.5rem ;
+    margin-top:1.3rem ;
+    background-color: #ed3d3d ;
+}
+.small-btn.filterBtn  {
+    margin-left: 0.5rem;
+    margin-top: 2.5rem;
+}
+.small-btn.submit-btn {
+    padding: 0.3rem 0rem ;
+    width: 5rem;
+    margin-left: 0rem;
+    margin-top: 2rem;
+}
+
+
+.secondary-btn-google {
+    margin: 0 0 0 2% !important;
+    background-image: url('../img/google_icon.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: 10% 50% !important;
+    padding-left: 3rem !important; /* Adjusted to create more space for the text */
+    padding-top: 1rem !important; /* Adjust for vertical alignment if necessary */
+    line-height: 0.5rem !important; /* Adjust based on the button's actual height to vertically center text */
+    padding-bottom: 0.1rem !important;
+    text-align: left !important; 
+}
+
+
+.info-btns a {
+    text-decoration: none;
+}
