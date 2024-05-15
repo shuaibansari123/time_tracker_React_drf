@@ -2,6 +2,7 @@
 Serializers for the act_tasks API
 '''
 
+
 from rest_framework import serializers
 from time_tracker.models import (Act_type, Act_name)
 
